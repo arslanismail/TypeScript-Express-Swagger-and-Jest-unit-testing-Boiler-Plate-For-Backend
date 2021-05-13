@@ -1,0 +1,124 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "boilerplate.wrapper",
+    "version": "1.0.0",
+    "description": "J2 Middleware Boilerplate Repository for API project.",
+    "x-logo": {
+      "url": "http://arslanismail.com/images/arslan1.png",
+      "altText": "boilerplate.wrapper"
+    },
+    "contact": {
+      "name": "Arslan Ismail ",
+      "url": "http://arslanismail.com/",
+      "email": "arslanismail840@gmail.com"
+    },
+    "host": "http://localhost:3000",
+    "basePath": "/api/v1"
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "components": {},
+  "paths": {
+    "/rubix/api/v1/*": {
+      "get": {
+        "tags": [
+          "Docs BoilerPlate"
+        ],
+        "summary": "BoilerPlate Express.js | Node.js | Typescript",
+        "description": "The Purpose of this Template is to used for referrence in future projects that have same Tech Stack<br /><br /> <b>BoilerPlate Api</b> <br /> http://rubix-dev01.conduit-aiondigital.com/api/v1/onboarding/documents/nationality-id-front/upload<br />Now with Proxy Same Api will be Like<br /><br /> <b>Proxy Api</b> <br />  https://aionj2middlewaredev.westindia.cloudapp.azure.com:8080/rubix/api/v1/documents/nationality-id-front/upload <br /><br />   <b>Note</b><br /> you just need to change the base URL , the endpoint like in above example documents/nationality-id-front/upload will remain same , body & headers or any other parameters will remain same <br /><br />Method should be any \"GET\", \"HEAD\", \"POST\", \"PUT\", \"PATCH\", \"DELETE\", \"OPTIONS\"",
+        "responses": {
+          "200": {
+            "description": null,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": ""
+                }
+              }
+            }
+          },
+          "500": {
+            "$ref": "#/definitions/Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "responseMeta": {
+      "type": "object",
+      "properties": {
+        "x-request-or-lang": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "response-time": {
+          "type": "string"
+        }
+      }
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "responseMetaData": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "responseTime": {
+              "type": "string"
+            },
+            "trace": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "desc": {
+                    "type": "string"
+                  },
+                  "traceDetails": {
+                    "type": "string"
+                  },
+                  "docRef": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "exception": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,10 @@
+definitions:
+  responseMeta:
+    type: object
+    properties:
+      x-request-or-lang:
+        type: string
+      source:
+        type: string
+      response-time:
+        type: string

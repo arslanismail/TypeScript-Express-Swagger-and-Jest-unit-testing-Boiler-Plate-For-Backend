@@ -1,0 +1,26 @@
+# Approach 1 Ignore specific Folders/Files
+
+MY_SECRET_PASSWORDS.txt
+
+.git
+.idea
+.vscode
+__tests__
+dist/
+logs/
+
+jest.config.js
+nodemon*.json
+docker/
+docker-compose*.yaml
+**/*.md
+
+node_modules/
+npm-debug.log
+
+.dockerignore
+
+yarn.lock
+
+# Approach 2 Allow specific Folders/Files
+# !src

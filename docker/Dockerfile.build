@@ -1,0 +1,47 @@
+# ################################################################
+# Docker file for wrapping nodejs service components
+# Copyright 2020-21 AionDigital
+#
+# Contributers:
+# - [FN] Fahid Nasir : fahid@aiondigital.com
+#
+# Change History:
+# 14-Apr-2020 [FN]: Initial Setup with LTS node.
+# ################################################################
+
+# Using latest LTS version running on alpine
+# node:lts-slim <==> node:12-buster-slim
+FROM node:12
+
+# Will remain same for all containers.
+# Version will be changed during CI/CD process
+# LABEL maintainer="AionDigital"
+# LABEL version=${IMAGE_VERSION}
+# LABEL description="Container for J2 application Middleware."
+
+# ARG PORT=3000
+
+# Working directory on which application binaries will be copied
+WORKDIR /jazeel
+
+COPY package*.json ./
+
+RUN npm install
+
+# Copy all content from this folder (including subfolders)
+# to a specific folder on the container
+COPY . .
+
+# Provide require authorities and run npm install
+# RUN chown -R node:node /jazeel && \
+#     chmod 770 -R /jazeel && \
+#     npm install
+# Set user node for future commands
+# USER node
+
+
+# Expose port 3000 to the host
+EXPOSE 3000
+
+# RUN following command
+CMD npm run start:prod

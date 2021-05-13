@@ -1,0 +1,16 @@
+paths:
+  /rubix/api/v1/*:
+    get:
+      tags:
+        - Docs BoilerPlate
+      summary: BoilerPlate Express.js | Node.js | Typescript
+      description: The Purpose of this Template is to used for referrence in future projects that have same Tech Stack<br /><br /> <b>BoilerPlate Api</b> <br /> http://rubix-dev01.conduit-aiondigital.com/api/v1/onboarding/documents/nationality-id-front/upload<br />Now with Proxy Same Api will be Like<br /><br /> <b>Proxy Api</b> <br />  https://aionj2middlewaredev.westindia.cloudapp.azure.com:8080/rubix/api/v1/documents/nationality-id-front/upload <br /><br />   <b>Note</b><br /> you just need to change the base URL , the endpoint like in above example documents/nationality-id-front/upload will remain same , body & headers or any other parameters will remain same <br /><br />Method should be any "GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"
+      responses:
+        '200':
+          description:
+          content:
+            application/json:
+              schema:
+                $ref: ''
+        '500':
+          $ref: '#/definitions/Error'

@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "aki77.autocomplete-symbols",
+    "CoenraadS.bracket-pair-colorizer",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "mikestead.dotenv",
+    "ms-vscode.node-debug",
+    "ms-vscode.node-debug2",
+    "NuclleaR.vscode-extension-auto-import",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml",
+    "wix.vscode-import-cost"
+  ]
+}

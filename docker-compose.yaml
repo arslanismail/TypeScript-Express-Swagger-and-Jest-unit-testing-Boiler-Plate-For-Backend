@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  jazeel:
+    container_name: arslan_boilerplate
+    # image: j2_middleware:$CDT_IMAGE_VERSION
+    image:  arslan_boilerplate:1.0
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      labels:
+        com.jazeel.maintainer: "Aion Digital"
+        # com.jazeel.version: $CDT_IMAGE_VERSION
+        com.jazeel.description: "Container for J2 application Middleware."
+    command: npm run start
+    networks:
+      - evaluation
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+#    ports:
+#      - "3000:3000"
+networks:
+  evaluation:
+    name: evaluation

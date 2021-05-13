@@ -1,0 +1,29 @@
+definitions:
+  Error:
+    type: object
+    properties:
+      responseMetaData:
+        type: object
+        properties:
+          status:
+            type: string
+          source:
+            type: string
+          description:
+            type: string
+          responseTime:
+            type: string
+          trace:
+            type: array
+            items:
+              properties:
+                code:
+                  type: string
+                desc:
+                  type: string
+                traceDetails:
+                  type: string
+                docRef:
+                  type: string
+      exception:
+        type: object

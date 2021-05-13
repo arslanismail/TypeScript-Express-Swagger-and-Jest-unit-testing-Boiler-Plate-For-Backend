@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Api Documentation - Jazeel 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding-top: 0;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+      #links_container {
+        margin: 0;
+        padding: 0;
+        background-color: #0033a0;
+        font-family: Roboto, sans-serif;
+        font-size: 1rem;
+      }
+
+      #links_container li {
+        display: inline-block;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top navigation placeholder -->
+    <!-- <nav>
+      <ul id="links_container">
+      </ul>
+    </nav> -->
+
+    <redoc
+      menu-toggle="true"
+      hide-download-button="true"
+      hide-hostname="true"
+      spec-url="./api.docs.json"
+      scroll-y-offset="body > nav"
+    ></redoc>
+
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
+    <script>
+      // list of APIS
+      // var apis = [
+      //   {
+      //     name: 'Gateway',
+      //     url: '/files/base.yaml'
+      //   },
+      //   {
+      //     name: 'Channel',
+      //     url: 'https://redocly.github.io/redoc/openapi.yaml'
+      //   },
+      //   {
+      //     name: 'Service',
+      //     url: '/files/swagger2.yaml'
+      //   }
+      // ];
+
+      // initially render first API
+      // Redoc.init(apis[0].url);
+
+      // function onClick() {
+      //   var url = this.getAttribute('data-link');
+      //   Redoc.init(url);
+      // }
+
+      // var $list = document.getElementById('links_container');
+      // apis.forEach(function(api) {
+      //   var $listitem = document.createElement('li');
+      //   $listitem.setAttribute('data-link', api.url);
+      //   $listitem.innerText = api.name;
+      //   $listitem.addEventListener('click', onClick);
+      //   $list.appendChild($listitem);
+      // });
+    </script>
+  </body>
+</html>
